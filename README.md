@@ -1,4 +1,4 @@
 # <h1>bodoe-hub</h1>
 
-# Packages
+# Packages used in this project
 - [axios](https://www.npmjs.com/package/axios)
