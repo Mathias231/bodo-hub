@@ -1,11 +1,14 @@
 // Imports
-//
+import FetchWeatherData from "./Data/GetWeather";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>myApp</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" />
+      </Routes>
+    </Router>
   );
 }
 
