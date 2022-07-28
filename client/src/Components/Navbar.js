@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+
+
 function Navbar() {
   return (
     <nav class="flex justify-center space-x-4">
