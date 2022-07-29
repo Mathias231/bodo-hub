@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function FetchWeatherData() {
-    const [weaterData, setWeaterData] = useState([]);
-    
+    const [weatherData, setWeaterData] = useState([]);
+
     useEffect(() => {
         axios.get("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=67.28&lon=14.405&altitude=11")
         .then(res => {
@@ -11,10 +11,11 @@ function FetchWeatherData() {
         })
     }, []);
 
-    if(weaterData) {
-        console.log(weaterData);
-    };
-
+    return(
+        <div>
+            {console.log(weatherData)};
+        </div>
+    )
 }
 
 
