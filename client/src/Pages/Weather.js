@@ -1,9 +1,11 @@
 import React from 'react'
 
+import WeatherBox from '../Components/WeatherBox'
+
 function Weather() {
   return (
     <div className="container mx-auto">
-      <h1>Weather</h1>
+      <WeatherBox />
     </div>
   )
 }
