@@ -2,7 +2,9 @@ import React from 'react'
 
 function Weather() {
   return (
-    <div>Weather</div>
+    <div class="container mx-auto">
+      <h1>Weather</h1>
+    </div>
   )
 }
 
