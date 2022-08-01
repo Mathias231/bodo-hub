@@ -1,6 +1,12 @@
 import React from 'react'
 
-function WeatherBox() {
+function WeatherBox(props) {
+  const tempOneHourAgo = props.weatherData[1].data.instant.details.air_temperature
+  const tempNow = props.weatherData[2].data.instant.details.air_temperature
+  const tempNextHour = props.weatherData[3].data.instant.details.air_temperature
+
+  const img = props.weatherData[0].data.next_1_hours.summary.symbol_code;
+  console.log(img);
 
   return (
         <div className="grid grid-cols-3 gap-2 space-x-4 mt-5">
