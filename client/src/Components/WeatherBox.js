@@ -32,7 +32,7 @@ function WeatherBox(props) {
       <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
         (!) Været for 1 time siden
         <div className="columns-2">
-          <img src={images[symbolCodeOneHourAgo + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
+          <img src={images[symbolCodeOneHourAgo + '.svg']} width="100px" className="scale-75" alt=''></img>
           <h1>Temp: {tempOneHourAgo}ºC</h1>
           <h1>Wind: {windOneHourAgo}m/s</h1>
         </div>
@@ -40,7 +40,7 @@ function WeatherBox(props) {
       <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
         (!) Været nå
         <div className="columns-2">
-          <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
+          <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75" alt=''></img>
           <h1>Temp: {tempNow}ºC</h1>
           <h1>Wind: {windNow}m/s</h1>
         </div>
@@ -48,7 +48,7 @@ function WeatherBox(props) {
       <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
         (!) Været om 1 time
         <div className="columns-2">
-          <img src={images[symbolCodeNextHour + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
+          <img src={images[symbolCodeNextHour + '.svg']} width="100px" className="scale-75" alt=''></img>
           <h1>Temp: {tempNextHour}ºC</h1>
           <h1>Wind: {windNextHour}m/s</h1>
         </div>
