@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import WeatherBox from '../Components/WeatherBox';
+import WeatherTable from '../Components/WeatherTable';
 
 function Weather() {
   const url = "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=67.28&lon=14.405&altitude=11";
@@ -18,6 +19,7 @@ function Weather() {
     return (
       <div className="container mx-auto">
         <WeatherBox weatherData={weatherData.properties.timeseries}/>
+        <WeatherTable weatherData={weatherData.properties.timeseries} />
       </div>
     )
   }
