@@ -1,6 +1,6 @@
 import React from 'react'
 
-function WeatherTable() {
+function WeatherTable(props) {
   return (
     <div>WeatherTable</div>
   )
