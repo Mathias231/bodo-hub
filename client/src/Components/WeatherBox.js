@@ -22,7 +22,7 @@ function WeatherBox(props) {
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
     return images;
   }
-  
+
   // Calls function and giving name to array 'images'
   const images = importAll(require.context('../svg', false, /\.(png|jpe?g|svg)$/));
 
@@ -34,7 +34,7 @@ function WeatherBox(props) {
               <div className="columns-2">
                 <img src={images[symbolCodeOneHourAgo + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
                 <h1>Temp: {tempOneHourAgo}ºC</h1>
-                <h1>Wind: {windOneHourAgo}</h1>
+                <h1>Wind: {windOneHourAgo}m/s</h1>
               </div>
             </div>
             <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
@@ -42,7 +42,7 @@ function WeatherBox(props) {
               <div className="columns-2">
                 <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
                 <h1>Temp: {tempNow}ºC</h1>
-                <h1>Wind: {windNow}</h1>
+                <h1>Wind: {windNow}m/s</h1>
               </div>
             </div>
             <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
@@ -50,7 +50,7 @@ function WeatherBox(props) {
               <div className="columns-2">
                 <img src={images[symbolCodeNextHour + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
                 <h1>Temp: {tempNextHour}ºC</h1>
-                <h1>Wind: {windNextHour}</h1>
+                <h1>Wind: {windNextHour}m/s</h1>
               </div>
             </div>
         </div>
