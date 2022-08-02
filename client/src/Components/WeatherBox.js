@@ -1,9 +1,9 @@
 import React from 'react'
 
 function WeatherBox(props) {
-  // const tempOneHourAgo = props.weatherData[1].data.instant.details.air_temperature
-  // const tempNow = props.weatherData[2].data.instant.details.air_temperature
-  // const tempNextHour = props.weatherData[3].data.instant.details.air_temperature
+  const tempOneHourAgo = props.weatherData[1].data.instant.details.air_temperature.toFixed();
+  const tempNow = props.weatherData[2].data.instant.details.air_temperature.toFixed();
+  const tempNextHour = props.weatherData[3].data.instant.details.air_temperature.toFixed();
 
   // A function that maps through images and replaces ./ to empty string | ./clody.svg => cloudy.svg
   function importAll(r) {
@@ -24,13 +24,27 @@ function WeatherBox(props) {
         <div className="grid grid-cols-3 gap-2 space-x-4 mt-5">
             <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
               (!) Været for 1 time siden
-              <img src={images[symbolCodeOneHourAgo + '.svg']} alt=''></img>
+              <div className="columns-2">
+                <img src={images[symbolCodeOneHourAgo + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
+                <h1>Temp: {tempOneHourAgo}ºC</h1>
+                <h1>Wind: </h1>
+              </div>
             </div>
             <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
-              <img src={images[symbolCodeNow + '.svg']} alt=''></img>
+              (!) Været nå
+              <div className="columns-2">
+                <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
+                <h1>Temp: {tempNow}ºC</h1>
+                <h1>Wind: </h1>
+              </div>
             </div>
             <div className="col-span-1 bg-slate-100 shadow-xl rounded-lg">
-              <img src={images[symbolCodeNextHour + '.svg']} alt=''></img>
+              (!) Været om 1 time
+              <div className="columns-2">
+                <img src={images[symbolCodeNextHour + '.svg']} width="100px" className="scale-75 animate-pulse" alt=''></img>
+                <h1>Temp: {tempNextHour}ºC</h1>
+                <h1>Wind: </h1>
+              </div>
             </div>
         </div>
   )
