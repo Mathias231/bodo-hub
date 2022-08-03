@@ -12,7 +12,7 @@ function WeatherTable(props) {
 
     // Calls function and giving name to array 'images'
     const images = importAll(require.context('../svg', false, /\.(png|jpe?g|svg)$/));
-    
+
   return (
     <>
         {/* div header */}
@@ -32,7 +32,6 @@ function WeatherTable(props) {
                 </div>
             </div>
         </div>
-        
         {/* Table body */}
         <div className='grid grid-cols-6'>
             <div className='bg-slate-500'>
