@@ -12,6 +12,7 @@ function WeatherTable(props) {
 
     // Calls function and giving name to array 'images'
     const images = importAll(require.context('../svg', false, /\.(png|jpe?g|svg)$/));
+    
   return (
     <>
         {/* div header */}
@@ -19,9 +20,9 @@ function WeatherTable(props) {
             <div className="col-start-2 col-end-4">
                 <div className='grid grid-cols-4'>
                     <h1 className='text-center'>Natt</h1>
-                    <h1>Morgen</h1>
-                    <h1>Ettermiddag</h1>
-                    <h1>Kveld</h1>
+                    <h1 className='text-center'>Morgen</h1>
+                    <h1 className='text-center'>Ettermiddag</h1>
+                    <h1 className='text-center'>Kveld</h1>
                 </div>
             </div>
             <div className="col-start-4 col-span-2">
@@ -38,7 +39,12 @@ function WeatherTable(props) {
                 Dato
             </div>
             <div className='col-span-2'>
-                <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75" alt=''></img>
+                <div className="flex flex-row">
+                    <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 ml-4" alt='' />
+                    <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 ml-6" alt='' />
+                    <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 ml-6" alt='' />
+                    <img src={images[symbolCodeNow + '.svg']} width="100px" className="scale-75 ml-7" alt='' />
+                </div>
             </div>
         </div>
     </>
